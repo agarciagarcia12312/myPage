@@ -70,6 +70,7 @@
 	text-align: center;
 }
 #joke {
+	color: blue;
 	margin-right: auto;
 	margin-left: auto;
 	font-weight: bold;
@@ -114,6 +115,7 @@
 	grid-row-end: 5;
 }
 .centerTittle {
+	color: green;
 	text-align:center;
 	/*text-decoration: underline;*/
 	/*text-decoration-style: */
