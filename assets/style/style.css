@@ -12,12 +12,12 @@
 	background-color: black;
 	color: white;
 	text-align: center;
-	font-size: 12px;
-	width: auto;
+	font-size: 16px;
+	width: 80px;
 	height: auto;
 	margin-left: 15px;
 	border: 2px solid green;
-	border-radius: 20px;
+	border-radius: 10px;
 }
 .sideButtons:hover {
 	cursor: pointer;
