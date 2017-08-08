@@ -44,7 +44,7 @@ $(document).ready(function() {
 
 
 	$("#projects").on("click", function(){
-		window.scrollTo(0, $("#me").offset().top);
+		window.scrollTo(0, $("#spot").offset().top);
 	});
 
 	$("#commentScroll").on("click", function(){
