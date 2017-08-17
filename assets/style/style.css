@@ -1,36 +1,55 @@
-body {
+#initial {
+	width: 3000px;
+	height: 1300px; 
+	background-color: black;
+	z-index: 11;
+}
+#myLogo {
+	position: fixed;
+	left: 26%;
+	width: 50%;
+	top:-10%;
+}
+#mainBody {
 	font-family: "Times New Roman", Times, serif;
 	background-color: grey;
 	background-image: url("../images/wall1.jpg");
-
+	background-size: 128%;
 }
 
+h3 {
+	font-size: 1.8em;
+}
+p {
+	margin-top: 2px;
+}
 #sidebar {
-	width: 80px;
+	width: 10%;
 	height: 300px;
 	/*background-color: grey;*/
 	position: fixed;
 	left: 0px;
-	top: 30%;
+	top: 20%;
 	/*border: 2px solid black;*/
 }
 .sideButtons {
 	background-color: black;
 	color: white;
 	text-align: center;
-	font-size: 16px;
-	width: 80px;
+	font-size: 1.2em;
+	width: 95px;
 	height: auto;
-	margin-left: 15px;
+	margin-left: 7%;
 	border: 2px solid green;
 	border-radius: 10px;
 }
 .sideButtons:hover {
 	cursor: pointer;
+	border-color:white;
 }
 #mail {
 	position: relative;
-	left: 20px;
+	left: 25%;
 }
 .container {
 	display: grid;
@@ -58,6 +77,7 @@ body {
 	
 }
 #name {
+	font-size: 2.7em;
 	margin-left: 10%;
 	color: black;
 	float: left;
@@ -74,6 +94,10 @@ body {
 	height: 35px;
 	border-radius: 10px;
 }
+.logos:hover {
+	width: 45px;
+	height: 45px;
+	}
 /*navbar section end*/
 
 .row1 {
@@ -89,7 +113,12 @@ body {
 	margin-right: auto;
 	margin-left: auto;
 	font-weight: bold;
-	font-size: 30px;
+	font-size: 2.5em;
+}
+
+#joke:hover {
+	cursor: pointer;
+	color: orange;
 }
 
 .me {
@@ -101,14 +130,15 @@ body {
 }
 #me {
 	margin-top: 8%;
-	width: 250px;
-	height: 200px;
+	width: 60%;
+	height: auto;
 	/*background-color: purple;*/
 
 }
 #myPic {
-	width: 250px;
+	width: 100%;
 	height: auto;
+	border: 2px yellow solid;
 	border-radius: 10px;
 
 }
@@ -121,7 +151,7 @@ body {
 }
 #summary {
 	color: black;
-	font-size: 24px;
+	font-size: 2em;
 	margin-right: 10%;
 
 }
@@ -135,42 +165,51 @@ body {
 .centerTittle {
 	color: green;
 	text-align:center;
+	font-size: 2.7em;
 	/*text-decoration: underline;*/
 	/*text-decoration-style: */
 }
-.pImages {
-	width: 210px;
-	height: 150px;
-	margin-top: 20px;
-	margin-right: auto;	
-	margin-left: auto;
-}
-.pTiitle {
-	position: relative;
-	top: -45px;
-	background-color: white;
-	opacity: .8;
-	text-align: center;
-	z-index: 0;
-}
-.pDescription {
-	text-align: center;
-	color: white;
-	font-size: 16px;
-	position: relative;
-	top: -30px;
-}
+
+
 .center {
 	margin-left: auto;
 	margin-right: auto;
 	
 }
+.pImages {
+	width: 100%;
+	height: 100%;
+	margin-top: 20px;
+	margin-right: auto;	
+	margin-left: auto;
+}
 .projects {
 	/*background-color: orange;*/
-	width: 210px;
-	height: 210px;
+	width: 75%;
+	height: 230px;
 	margin-left: auto;
 	margin-right: auto;
+}
+.pImages:hover {
+	border: 2px white solid;
+}
+.pTiitle {
+	position: relative;
+	width: 100%;
+	top: -68px;
+	background-color: white;
+	margin-left: 1px;
+	text-align: center;
+	z-index: 0;
+	border: 1px black solid;
+}
+.pDescription {
+	text-align: center;
+	color: white;
+	margin-top: 12%;
+	font-size: 1.5em;
+	position: relative;
+	/*top: -30px;*/
 }
 .p1 {
 	/*background-color: blue;*/
@@ -219,7 +258,7 @@ body {
 }
 .box {
 	width: 220px;
-	height: 210px;
+	height: 230px;
 	margin: 50px auto 50px auto;
 	background-color:white;
 	border: 1px solid green;
@@ -241,15 +280,22 @@ button {
 	background-color: black;
 	color: white;
 	border-color: green;
+
 }
 /*button*/
 #open {
 	margin-left: 30%;
-	margin-top: 20%;
+	margin-top: 10%;
+	font-size: 1.2em;
 }
+button:hover {
+	cursor: pointer;
+	/*border-color: grey;*/
+	border: 2px yellow solid;
+} 
 #text {
 	margin-left: 15px;
-	font-size: 12px;
+	font-size: 18px;
 }
 #commentTittle {
 	margin-left: 15px;

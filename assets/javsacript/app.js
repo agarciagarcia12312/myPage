@@ -30,7 +30,7 @@ $("#commenSubmit").on("click", function () {
 database.ref("/comments").on("child_added", function(snapshot) {
 	var snap = snapshot.val();
 	var text = $("<div> - " + snap.comments +"</div>");
-	console.log(text);
+	// console.log(text);
 	$("#text").prepend(text);
 })
 
@@ -56,16 +56,63 @@ $(document).ready(function() {
 		$("#open").hide();
 	})
 
-	$.ajax({
-		url: "https://icanhazdadjoke.com/",
-		dataType:"json",
-		method:"GET"
-	}).done(function(responce) {
-		$("#joke").html('"'+ responce.joke + '"');
+	function newJoke () {	
+		$.ajax({
+			url: "https://icanhazdadjoke.com/",
+			dataType:"json",
+			method:"GET"
+		}).done(function(responce) {
+			$("#joke").html('"'+ responce.joke + '"');
+		});
+	}
+	newJoke();	
+
+	$("#joke").on("click", function() {
+		newJoke();
+	})
+
+//================for  better user interface============
+	
+	setTimeout(function() {
+		$("#initial").fadeOut();
+		$("#sidebar").fadeIn("slow");
+		$(".navBar").fadeIn("slow");
+	},1500);
+	setTimeout(function() {
+		$("#myLogo").fadeIn()
+	},500)
+
+
+	// project tittle appers on mouseover
+	$("#pic1").mouseover(function(){
+   		$("#t1").fadeIn();
 	});
+	$("#pic1").mouseout(function(){
+   		$("#t1").fadeOut();
+	});
+
+	$("#pic2").mouseover(function(){
+   		$("#t2").fadeIn();
+	});
+
+	$("#pic2").mouseout(function(){
+   		$("#t2").fadeOut();
+	});
+
+	$("#pic3").mouseover(function(){
+   		$("#t3").fadeIn();
+	});
+	$("#pic3").mouseout(function(){
+   		$("#t3").fadeOut();
+	});
+	// end of mouseover functions
 
 
 	
 
 });
 
+// $("#p2").hover(function() {
+// 		console.log("hover");
+	
+// 	  });

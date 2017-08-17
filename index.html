@@ -10,10 +10,12 @@
 
 </head>
 
+<div id="initial" >
+	<img src="assets/images/logo.png" id="myLogo" style="display:none;">
+</div>
 
 
-
-<div id="sidebar">
+<div id="sidebar" style="display:none;">
 	
 	<div class="sideButtons" id="about">
 		About
@@ -43,9 +45,10 @@
 </div>
 
 
-<body>
+
+<body id="mainBody">
 	<div class="container">
-		<div class="navBar">
+		<div class="navBar" style="display:none;">
 			<!-- <h1> Andy Garia</h1> -->
 			<a href="index.html">
 				<h1 id="name"> Andy Garcia</h1>
@@ -73,6 +76,7 @@
 		<div class="me">
 			<div id="me" class="center">
 				<img id="myPic" src="assets/images/me2.JPG">
+
 			</div>
 			<!-- <br id= "spot" > -->
 		</div>
@@ -80,9 +84,8 @@
 		<div class="aboutMe">
 			<p id="summary"><b>About me:</b>  I've always had a great interest in the latest technology and how they could make life better and simpler. My favorite part of web design is learning through the process of problem solving and seeing my work take shape. </p>
 			<span id="spot"></span>
-			<p id="summary"><b>Skills:</b> HTML, CSS, Javscript, Bootstrap, jQuery, SQL, Firebase, Node.js and React.js.  </p>
-			
-		</div>
+			<p id="summary"><b>Experience in:</b> HTML, CSS, Javscript, Bootstrap, jQuery, SQL, Firebase, Node.js and React.js.  </p>
+				</div>
 
 		<div class="portfolioTittle">
 			<h1 class="centerTittle">Projects:</h1>
@@ -92,8 +95,8 @@
 		<div class="p1">
 			<a href="https://agarciagarcia12312.github.io/Hangman-Game/">
 				<div class="projects" >
-					<img class="pImages" src="assets/images/hangman.png">
-					<h3 class="pTiitle">Game of Hangman</h3>
+					<img class="pImages" src="assets/images/hangman.png" id="pic1">
+					<h3 class="pTiitle" id="t1" style="display: none;">Game of Hangman</h3>
 				</div>
 			</a>	
 			<p class="pDescription" >Game of Hangman</p>
@@ -102,8 +105,8 @@
 		<div class="p2">
 		<a href="https://maya-tea.github.io/moveToDenver/">
 			<div class="projects" id="p1">
-				<img class="pImages" src="assets/images/moveToDenver.png">
-				<h3 class="pTiitle">Move To Denver</h3>
+				<img class="pImages" src="assets/images/moveToDenver.png" id ="pic2">
+				<h3 class="pTiitle" style= "display: none;" id="t2">Move To Denver</h3>
 			</div>
 		</a>
 		<p class="pDescription" >Website that provides information on all the denver neighborhoods</p>	
@@ -112,8 +115,8 @@
 		<div class="p3">
 		<a href="https://agarciagarcia12312.github.io/TriviaGame/">
 			<div class="projects">
-				<img class="pImages" src="assets/images/trivia.png">
-				<h3 class="pTiitle">Trivia Game</h3>
+				<img class="pImages" src="assets/images/trivia.png" id="pic3">
+				<h3 class="pTiitle" id="t3" style="display: none;">Trivia Game</h3>
 			</div>
 		</a>
 		<p class="pDescription" >Game of Trivia</p>	
