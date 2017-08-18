@@ -77,6 +77,7 @@ $(document).ready(function() {
 		$("#initial").fadeOut();
 		$("#sidebar").fadeIn("slow");
 		$(".navBar").fadeIn("slow");
+		$(".container").fadeIn("slow");
 	},1500);
 	setTimeout(function() {
 		$("#myLogo").fadeIn()
