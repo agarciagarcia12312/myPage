@@ -40,15 +40,18 @@ $(document).ready(function() {
 	
 	$("#about").on("click", function(){
 		window.scrollTo(0, $("#me").offset().bottom);
+		blurPage();
 	});
 
 
 	$("#projects").on("click", function(){
-		window.scrollTo(0, $("#spot").offset().top);
+		window.scrollTo(0, $("#page2").offset().top);
+		blurPage();
 	});
 
 	$("#commentScroll").on("click", function(){
 		window.scrollTo(0, $(".commentBox").offset().top);
+		blurPage();
 	});
 
 	$("#open").click(function() {
@@ -73,16 +76,66 @@ $(document).ready(function() {
 
 //================for  better user interface============
 	
+	// A.G codes Intro ....
 	setTimeout(function() {
 		$("#initial").fadeOut();
-		$("#sidebar").fadeIn("slow");
 		$(".navBar").fadeIn("slow");
 		$(".container").fadeIn("slow");
-	},1500);
+		$("#menuIcon").fadeIn(1000)
+		$("#background").fadeIn()
+	},1000);
 	setTimeout(function() {
 		$("#myLogo").fadeIn()
 	},500)
+	// ...../
+	
+	// on scroll functions to blur divs	
+	var pxlCount = 0;
+	var pjPosition = $("#page2").offset().top/175;
+	var commentPosition = $("#page3").offset().top/115;
+	
+	function blurPage () {	
+		
+	    pxlCount = $(document).scrollTop()/50;
+	    p2Change = Math.abs((pxlCount - pjPosition))-1  ;
+	    p3Change  = Math.abs((pxlCount - commentPosition))-3 ;
+	    // console.log(pxlCount)
+	    console.log(commentPosition)
+    	// blur first div
+    	$(".me, .aboutMe, .navBar, #joke").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
+		$(".p1, .p2, .p3, #page2").css({"-webkit-filter": "blur("+p2Change	+"px)","-moz-filter": "blur("+p2Change	+"px)","filter": "blur("+p2Change	+"px)" }) ;
+		$("#page3, #thanks, .commentForm, .commentBox ").css({"-webkit-filter": "blur("+p3Change	+"px)","-moz-filter": "blur("+p3Change	+"px)","filter": "blur("+p3Change	+"px)" }) ;
+	}
+	blurPage();
 
+	// on scroll functions to blur divs	
+	$(window).on('scroll', function () {
+		blurPage();
+	});
+	// menu Icon animate
+	var rotateAmount = 0;
+	var clickCount =1;
+	$("#menuIcon").on("click", function() {
+		console.log("click working")
+		
+		rotateAmount+=720;
+
+		$(this).animate({rotation:rotateAmount}, {
+			duration:500,
+			step: function(now, fx) {
+              $(this).css({"transform": "rotate(" + now +"deg)"});
+              console.log(now);
+     
+          }
+		})
+		if (clickCount%2) {
+			$("#sidebar").slideDown("fast","linear");
+		} else {
+			$("#sidebar").fadeOut();
+		}
+		clickCount +=1;
+	})
+		
 
 	// project tittle appers on mouseover
 	$("#pic1").mouseover(function(){

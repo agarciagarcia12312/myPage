@@ -5,16 +5,24 @@
 	<!-- style reference -->
 	<link rel="stylesheet" type="text/css" href="assets/style/style.css">
 	<!-- ?jQuere -->
+	<!-- <script src="src/jquery.rotate.js"></script> -->
+
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- jquery transform -->
+	
 	
 
+
 </head>
+
+
 
 <div id="initial" >
 	<img src="assets/images/logo.png" id="myLogo" style="display:none;">
 </div>
+<div id="background" style="display: none;"></div>
 
-
+<img style="display:none;" src="assets/images/menuLogo.png" id="menuIcon">
 <div id="sidebar" style="display:none;">
 	
 	<div class="sideButtons" id="about">
@@ -68,12 +76,13 @@
 			</div>
 
 		</div>
-
-		<div class="row1">
+		
+		<div class="row1"><br>
 			<h1 id="joke"></h1>
 		</div>
 			
 		<div class="me">
+		<br>	
 			<div id="me" class="center">
 				<img id="myPic" src="assets/images/me2.JPG">
 
@@ -82,13 +91,16 @@
 		</div>
 
 		<div class="aboutMe">
+		<br>
 			<p id="summary"><b>About me:</b>  I've always had a great interest in the latest technology and how they could make life better and simpler. My favorite part of web design is learning through the process of problem solving and seeing my work take shape. </p>
 			<span id="spot"></span>
 			<p id="summary"><b>Experience in:</b> HTML, CSS, Javscript, Bootstrap, jQuery, SQL, Firebase, Node.js and React.js.  </p>
 				</div>
-
+		
+		<div id="heightDiv"></div>	
 		<div class="portfolioTittle">
-			<h1 class="centerTittle">Projects:</h1>
+		<br><br>
+			<h1 id="page2" class="centerTittle">Projects:</h1><br>
 			<hr>
 		</div>
 
@@ -121,9 +133,11 @@
 		</a>
 		<p class="pDescription" >Game of Trivia</p>	
 		</div>
+		
+		<div class="p4">	</div>
 
 		<div class="comentTittle">
-			<h1 class="centerTittle">Comments:</h1>
+			<h1 class="centerTittle" id="page3">Comments:</h1>
 			<hr>
 		</div>
 
@@ -149,8 +163,11 @@
 					- test comment
 				</p>
 			</div>
-		</div>
 
+
+		</div>
+	
+		<div class="commentSpace"></div>
 	</div>
 </body>
 
