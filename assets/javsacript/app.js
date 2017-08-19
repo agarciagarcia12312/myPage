@@ -91,7 +91,7 @@ $(document).ready(function() {
 	
 	// on scroll functions to blur divs	
 	var pxlCount = 0;
-	var pjPosition = $("#page2").offset().top/180;
+	var pjPosition = $("#page2").offset().top/170;
 	var commentPosition = $("#page3").offset().top/125;
 	
 	function blurPage () {	
