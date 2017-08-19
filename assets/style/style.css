@@ -190,7 +190,7 @@ p {
 	height: 350px;
 }
 #summary {
-	color: orange;
+	color: green;
 	font-size: 2em;
 	margin-right: 10%;
 	/*overflow-y: scroll;	*/
