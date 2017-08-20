@@ -1,3 +1,4 @@
+// firebase init
 var config = {
     apiKey: "AIzaSyAxoG5-rMlRl4ZTDO7_v3J9Au8utaavCvM",
     authDomain: "mypage-558cd.firebaseapp.com",
@@ -10,8 +11,8 @@ firebase.initializeApp(config);
 var database = firebase.database();
 
 var commentsRef = database.ref("/comments");
+// end firebase init
 
-// commentsRef.on()
 
 $("#commenSubmit").on("click", function () {
 	event.preventDefault();
@@ -27,6 +28,7 @@ $("#commenSubmit").on("click", function () {
 
 });
 
+// adding the comments
 database.ref("/comments").on("child_added", function(snapshot) {
 	var snap = snapshot.val();
 	var text = $("<div> - " + snap.comments +"</div>");
@@ -38,6 +40,7 @@ database.ref("/comments").on("child_added", function(snapshot) {
 
 $(document).ready(function() {
 	
+	// on click functions that users to a specific section
 	$("#about").on("click", function(){
 		window.scrollTo(0, $("#me").offset().bottom);
 		blurPage();
@@ -165,8 +168,3 @@ $(document).ready(function() {
 	
 
 });
-
-// $("#p2").hover(function() {
-// 		console.log("hover");
-	
-// 	  });

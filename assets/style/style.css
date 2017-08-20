@@ -187,7 +187,7 @@ p {
 	grid-row-start: 3;
 	grid-row-end: 4;
 	overflow-y:scroll;
-	height: 350px;
+	height: 360px;
 }
 #summary {
 	color: green;
