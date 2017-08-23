@@ -1,3 +1,28 @@
+button {
+	margin-left: 15px;
+	margin-top: 10px;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	border-color: green;
+
+}
+/*button*/
+button:hover {
+	cursor: pointer;
+	/*border-color: grey;*/
+	border: 2px yellow solid;
+} 
+a:link {
+	text-decoration: none;
+}
+h3 {
+	font-size: 1.8em;
+}
+p {
+	margin-top: 2px;
+}
+
 #background {
 	position: fixed;
 	left: 0;
@@ -5,16 +30,10 @@
 	width:100%;
 	height: 100%;
 	background-image: url("../images/wall1.jpg");
+	/*background-image: url("https://escapadas.mexicodesconocido.com.mx/wp-content/uploads/galleries/288/original/Tlaxcala-La-Malinche-Paisaje.png");*/
+	/*background-image: url("http://wallpapercave.com/wp/1VvXZCN.jpg");*/
 	background-size: 100%;
 	z-index: -5;
-
-
-}
-#menuIcon:hover {
-	cursor: pointer;
-	width: 120px;
-	height: 120px;
-	/*height: auto;*/
 }
 #initial {
 	width: 3000px;
@@ -35,13 +54,6 @@
 	background-size: 128%;
 	padding-bottom: 450px;
 	z-index: 10;
-}
-
-h3 {
-	font-size: 1.8em;
-}
-p {
-	margin-top: 2px;
 }
 #sidebar {
 	width: 10%;
@@ -72,6 +84,9 @@ p {
 	color: 	green;
 	border-color:white;
 	font-size: 	1.8em;
+}
+#resumeLink {
+	text-decoration: underline;;
 }
 #mail {
 	position: relative;
@@ -114,26 +129,33 @@ p {
 	font-size: 1.2em;
 	margin-top: 15px;
 	margin-right: 11%;
+	width: 300px;
 }
 
 #menuIcon {
 	position: fixed;	
-	left: 1%;
+	left: 1.2%;
 	top: 12%;
-	width: 	100px;
-	height:100px;
+	width: 	90px;
+	height:90px;
+}
+#menuIcon:hover {
+	cursor: pointer;
+	width: 100px;
+	height: 100px;
+	/*height: auto;*/
 }
 .logos {
-	
-	margin-left: 5px;
-	width: 35px;
-	height:45px;
+	text-decoration: none;
+	margin-left: 5%;
+	width: 60px;
+	height:50px;
 	border-radius: 10px;
 }
 .logos:hover {
-	width: 45px;
-	height: 45px;
-	border: 1px black solid;
+	width: 50px;
+	height: 43px;
+	/*border: 1px grey solid;*/
 	}
 /*navbar section end*/
 
@@ -231,6 +253,8 @@ p {
 	width: 100%;
 	height: 100%;
 	margin-top: 20px;
+	border-radius: 10px;
+	border: 2px yellow solid;
 	margin-right: auto;	
 	margin-left: auto;
 }
@@ -242,17 +266,22 @@ p {
 	margin-right: auto;
 }
 .pImages:hover {
-	border: 2px white solid;
+	border: 2px green solid;
 }
 .pTiitle {
 	position: relative;
 	width: 100%;
-	top: -68px;
+	height: 25%;
+	top: -90px;
+	color: black;
+	font-size: 2.2em;
+	font-weight: bold;
 	background-color: white;
 	margin-left: 1px;
 	text-align: center;
 	z-index: 0;
-	border: 1px black solid;
+	opacity: .9;
+	border-top: 2px blue solid;
 }
 .pDescription {
 	text-align: center;
@@ -351,16 +380,16 @@ button {
 
 }
 /*button*/
-#open {
-	margin-left: 30%;
-	margin-top: 10%;
-	font-size: 1.2em;
-}
 button:hover {
 	cursor: pointer;
 	/*border-color: grey;*/
 	border: 2px yellow solid;
 } 
+#open {
+	margin-left: 30%;
+	margin-top: 10%;
+	font-size: 1.2em;
+}
 #text {
 	margin-left: 15px;
 	font-size: 18px;

@@ -42,19 +42,24 @@ $(document).ready(function() {
 	
 	// on click functions that users to a specific section
 	$("#about").on("click", function(){
-		window.scrollTo(0, $("#me").offset().bottom);
-		blurPage();
+		 $('html, body').animate({
+        	scrollTop: $(".navBar").offset().top
+    	}, 1000);
 	});
 
-
+	// takes user to projects
 	$("#projects").on("click", function(){
-		window.scrollTo(0, $("#page2").offset().top);
-		blurPage();
+		 $('html, body').animate({
+        	scrollTop: $("#page2").offset().top
+    	}, 1000);
 	});
-
+	// takes users to comment section
 	$("#commentScroll").on("click", function(){
-		window.scrollTo(0, $(".commentBox").offset().top);
-		blurPage();
+		 $('html, body').animate({
+        	scrollTop: $(".commentBox").offset().top
+    	}, 3000);
+		// window.scrollTo(0, $(".commentBox").offset().top);
+		// blurPage();
 	});
 
 	$("#open").click(function() {
@@ -99,9 +104,9 @@ $(document).ready(function() {
 	
 	function blurPage () {	
 		
-	    pxlCount = $(document).scrollTop()/50;
+	    pxlCount = $(document).scrollTop()/50 ;
 	    p2Change = Math.abs((pxlCount - pjPosition))-2  ;
-	    p3Change  = Math.abs((pxlCount - commentPosition))-3 ;
+	    p3Change  = Math.abs((pxlCount - commentPosition))-2;
 	    // console.log(pxlCount)
 	    console.log(commentPosition)
     	// blur first div
