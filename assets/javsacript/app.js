@@ -43,20 +43,20 @@ $(document).ready(function() {
 	// on click functions that users to a specific section
 	$("#about").on("click", function(){
 		 $('html, body').animate({
-        	scrollTop: $(".navBar").offset().top
+        	scrollTop: $("#aboutPage").offset().top-125
     	}, 1000);
 	});
 
 	// takes user to projects
 	$("#projects").on("click", function(){
 		 $('html, body').animate({
-        	scrollTop: $("#page2").offset().top
+        	scrollTop: $("#page2").offset().top-130
     	}, 1000);
 	});
 	// takes users to comment section
 	$("#commentScroll").on("click", function(){
 		 $('html, body').animate({
-        	scrollTop: $(".commentBox").offset().top
+        	scrollTop: $("#page3").offset().top-125
     	}, 3000);
 		// window.scrollTo(0, $(".commentBox").offset().top);
 		// blurPage();
@@ -99,21 +99,52 @@ $(document).ready(function() {
 	
 	// on scroll functions to blur divs	
 	var pxlCount = 0;
-	var pjPosition = $("#page2").offset().top/175;
-	var commentPosition = $("#page3").offset().top/125;
+	var pjPosition = $("#page2").offset().top/225;
+	var aboutPosition = $("#aboutPage").offset().top/100;
+	var commentPosition = $("#page3").offset().top/100;
 	
 	function blurPage () {	
 		
 	    pxlCount = $(document).scrollTop()/50 ;
-	    p2Change = Math.abs((pxlCount - pjPosition))-2  ;
+	    p1Change = Math.abs((pxlCount - pjPosition))-2  ;
+	    p2Change = Math.abs((pxlCount - aboutPosition))-2  ;
 	    p3Change  = Math.abs((pxlCount - commentPosition))-2;
-	    // console.log(pxlCount)
-	    console.log(commentPosition)
+ 		// console.log(pxlCount)
+	    // console.log(commentPosition)
     	// blur first div
-    	$(".me, .aboutMe, .navBar, #joke").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
+	    console.log(pxlCount)
+    	$("#joke").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
+		$("#aboutPage, .me, #summary").css({"-webkit-filter": "blur("+p1Change+"px)","-moz-filter": "blur("+p1Change+"px)","filter": "blur("+p1Change+"px)" }) ;
 		$(".p1, .p2, .p3, #page2").css({"-webkit-filter": "blur("+p2Change	+"px)","-moz-filter": "blur("+p2Change	+"px)","filter": "blur("+p2Change	+"px)" }) ;
 		$("#page3, #thanks, .commentForm, .commentBox ").css({"-webkit-filter": "blur("+p3Change	+"px)","-moz-filter": "blur("+p3Change	+"px)","filter": "blur("+p3Change	+"px)" }) ;
-	}
+	
+	    if (pxlCount>10) {
+	    	$("#name").css({
+	    		"color": "black"
+	    	},3000);
+	    	$(".navBar").css({
+	    		"background-image": "url(assets/images/wall1.jpg)"
+	    	});
+	    	$(".sideButtons").css({
+	    		"color": "black"
+	    	});
+	    }
+	    if (pxlCount<10) {
+	    	$("#name").css({
+	    		"color": "white"
+	    	},3000);
+	    	$(".navBar").css({
+	    		"background": "none"
+	    	});
+	    	$(".sideButtons").css({
+	    		"color": "white"
+	    	});
+	    }
+	}    
+	    // console.log(pxlCount)
+	    // console.log(commentPosition)
+    	// blur first div
+    	
 	blurPage();
 
 	// on scroll functions to blur divs	
