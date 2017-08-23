@@ -99,15 +99,15 @@ $(document).ready(function() {
 	
 	// on scroll functions to blur divs	
 	var pxlCount = 0;
-	var pjPosition = $("#page2").offset().top/225;
-	var aboutPosition = $("#aboutPage").offset().top/100;
-	var commentPosition = $("#page3").offset().top/100;
+	var aboutPosition = $("#aboutPage").offset().top/50;
+	var pjPosition = $("#page2").offset().top/50;
+	var commentPosition = $("#page3").offset().top/50;
 	
 	function blurPage () {	
 		
 	    pxlCount = $(document).scrollTop()/50 ;
-	    p1Change = Math.abs((pxlCount - pjPosition))-2  ;
-	    p2Change = Math.abs((pxlCount - aboutPosition))-2  ;
+	    p1Change = Math.abs((pxlCount - aboutPosition))-2  ;
+	    p2Change = Math.abs((pxlCount - pjPosition))-2  ;
 	    p3Change  = Math.abs((pxlCount - commentPosition))-2;
  		// console.log(pxlCount)
 	    // console.log(commentPosition)
