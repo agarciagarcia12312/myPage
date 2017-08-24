@@ -41,6 +41,12 @@ database.ref("/comments").on("child_added", function(snapshot) {
 $(document).ready(function() {
 	
 	// on click functions that users to a specific section
+	$("#name").on("click", function(){
+		 $('html, body').animate({
+        	scrollTop: 0
+    	}, 1500);
+	});
+
 	$("#about").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#aboutPage").offset().top-125

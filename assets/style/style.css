@@ -147,6 +147,9 @@ p {
 	color: white;
 	float: left;
 }
+#name:hover {
+	cursor: pointer;
+}
 #connect {
 	float: right;
 	font-size: 1.2em;
