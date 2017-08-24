@@ -128,9 +128,10 @@ $(document).ready(function() {
 		
 	    pxlCount = $(document).scrollTop()/50 ;
 	    
-	    p1Change = Math.abs(pxlCount - aboutPosition)-.3  ;
-	    p2Change = Math.abs(pxlCount - pjPosition)-.3 ;
-	    p3Change  = Math.abs(pxlCount - commentPosition)-.3;
+	    // the -1 added makes the scrolling blur less sensative
+	    p1Change = Math.abs(pxlCount - aboutPosition)-1  ;
+	    p2Change = Math.abs(pxlCount - pjPosition)-1 ;
+	    p3Change  = Math.abs(pxlCount - commentPosition)-1;
 	    // console.log("screenHeight: " + screenHeight);
 		// console.log("documentHeight" + documentHeight);
 		// console.log("percentage: " + scToDoc);
