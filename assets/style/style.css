@@ -49,6 +49,16 @@ p {
 	width: 50%;
 	top:-10%;
 }
+#photCredit {
+	position:absolute;
+	bottom: 0px;
+	left: 45%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	color: white;
+	font-style: italic;
+}
 #mainBody {
 	font-family: "Times New Roman", Times, serif;
 	background-color: grey;

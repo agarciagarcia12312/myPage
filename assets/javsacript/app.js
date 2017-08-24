@@ -131,17 +131,17 @@ $(document).ready(function() {
 	    p1Change = Math.abs(pxlCount - aboutPosition)-.3  ;
 	    p2Change = Math.abs(pxlCount - pjPosition)-.3 ;
 	    p3Change  = Math.abs(pxlCount - commentPosition)-.3;
-	    console.log("screenHeight: " + screenHeight);
+	    // console.log("screenHeight: " + screenHeight);
 		// console.log("documentHeight" + documentHeight);
-		console.log("percentage: " + scToDoc);
- 		console.log("pxlCount: " + pxlCount);
- 		console.log("aboutPosition: " + aboutPosition);
- 		console.log("change: " +p1Change);
+		// console.log("percentage: " + scToDoc);
+ 	// 	console.log("pxlCount: " + pxlCount);
+ 	// 	console.log("aboutPosition: " + aboutPosition);
+ 	// 	console.log("change: " +p1Change);
 
 	    // console.log(commentPosition)
     	// blur first div
 	    // console.log(pxlCount)
-    	$("#joke").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
+    	$("#joke, #photCredit").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
 		$("#aboutPage, .me, #summary").css({"-webkit-filter": "blur("+p1Change+"px)","-moz-filter": "blur("+p1Change+"px)","filter": "blur("+p1Change+"px)" }) ;
 		$(".p1, .p2, .p3, #page2").css({"-webkit-filter": "blur("+p2Change	+"px)","-moz-filter": "blur("+p2Change	+"px)","filter": "blur("+p2Change	+"px)" }) ;
 		$("#page3, #thanks, .commentForm, .commentBox ").css({"-webkit-filter": "blur("+p3Change	+"px)","-moz-filter": "blur("+p3Change	+"px)","filter": "blur("+p3Change	+"px)" }) ;
@@ -191,7 +191,7 @@ $(document).ready(function() {
 			duration:500,
 			step: function(now, fx) {
               $(this).css({"transform": "rotate(" + now +"deg)"});
-              console.log(now);
+              // console.log(now);
      
           }
 		})
