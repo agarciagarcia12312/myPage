@@ -44,7 +44,7 @@ $(document).ready(function() {
 	$("#about").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#aboutPage").offset().top-125
-    	}, 1000);
+    	}, 1500);
 	});
 
 	// takes user to projects
@@ -57,7 +57,7 @@ $(document).ready(function() {
 	$("#commentScroll").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#page3").offset().top-125
-    	}, 3000);
+    	}, 1500);
 		// window.scrollTo(0, $(".commentBox").offset().top);
 		// blurPage();
 	});
@@ -82,37 +82,59 @@ $(document).ready(function() {
 		newJoke();
 	})
 
-//================for  better user interface============
+//================ for  better user interface ============
 	
 	// A.G codes Intro ....
 	setTimeout(function() {
 		$("#initial").fadeOut();
-		$(".navBar").fadeIn("slow");
+		$(".navBar, #joke").fadeIn(1200);
 		$(".container").fadeIn("slow");
-		$("#menuIcon").fadeIn(1000)
+		$("#menuIcon, .navBar").fadeIn(1600)
 		$("#background").fadeIn()
 	},1000);
 	setTimeout(function() {
 		$("#myLogo").fadeIn()
-	},500)
+	},250);
+
+	setTimeout(function() {
+		$("#myLogo").fadeOut()
+	},1000)
 	// ...../
 	
 	// on scroll functions to blur divs	
 	var pxlCount = 0;
-	var aboutPosition = $("#aboutPage").offset().top/50;
-	var pjPosition = $("#page2").offset().top/50;
-	var commentPosition = $("#page3").offset().top/50;
-	
+	// height of viewing screen
+	const screenHeight = $(window).height()/50;
+	// height of entire document
+	const documentHeight = $(document).height()/50;
+	// ratio of viewing screens to document
+	const scToDoc = documentHeight / screenHeight;
+
+	// got the possiton of the section in the document 
+	// then added a percentage of the screen size to adjust for the navbar
+	const aboutPosition = $("#aboutPage").offset().top/50 + scToDoc/2;
+	const pjPosition = $("#page2").offset().top/50 + scToDoc/2;
+	const commentPosition = $("#page3").offset().top/50 + scToDoc/2;
+
+
+
 	function blurPage () {	
 		
 	    pxlCount = $(document).scrollTop()/50 ;
-	    p1Change = Math.abs((pxlCount - aboutPosition))-2  ;
-	    p2Change = Math.abs((pxlCount - pjPosition))-2  ;
-	    p3Change  = Math.abs((pxlCount - commentPosition))-2;
- 		// console.log(pxlCount)
+	    
+	    p1Change = Math.abs(pxlCount - aboutPosition)-.3  ;
+	    p2Change = Math.abs(pxlCount - pjPosition)-.3 ;
+	    p3Change  = Math.abs(pxlCount - commentPosition)-.3;
+	    console.log("screenHeight: " + screenHeight);
+		// console.log("documentHeight" + documentHeight);
+		console.log("percentage: " + scToDoc);
+ 		console.log("pxlCount: " + pxlCount);
+ 		console.log("aboutPosition: " + aboutPosition);
+ 		console.log("change: " +p1Change);
+
 	    // console.log(commentPosition)
     	// blur first div
-	    console.log(pxlCount)
+	    // console.log(pxlCount)
     	$("#joke").css({"-webkit-filter": "blur("+pxlCount+"px)","-moz-filter": "blur("+pxlCount+"px)","filter": "blur("+pxlCount+"px)" }) ;   
 		$("#aboutPage, .me, #summary").css({"-webkit-filter": "blur("+p1Change+"px)","-moz-filter": "blur("+p1Change+"px)","filter": "blur("+p1Change+"px)" }) ;
 		$(".p1, .p2, .p3, #page2").css({"-webkit-filter": "blur("+p2Change	+"px)","-moz-filter": "blur("+p2Change	+"px)","filter": "blur("+p2Change	+"px)" }) ;
