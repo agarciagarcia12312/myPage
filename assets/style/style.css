@@ -121,7 +121,7 @@ p {
 	top: 0;
 	left: 0;
 	
-	/*background-image: url("http://wallpapercave.com/wp/1VvXZCN.jpg");*/
+	/*background-image: url("https://lineadecontraste.com/wp-content/uploads/2017/03/Tlaxcala-2.jpg");*/
 	background-image:  url("../images/tlaxcala.jpg");
 	/*background-image: url("https://escapadas.mexicodesconocido.com.mx/wp-content/uploads/galleries/288/original/Tlaxcala-La-Malinche-Paisaje.png");*/
 	background-size: 100%;
@@ -300,7 +300,7 @@ p {
 	height: 100%;
 	margin-top: 20px;
 	border-radius: 10px;
-	border: 2px yellow solid;
+	border: 2px green solid;
 	margin-right: auto;	
 	margin-left: auto;
 }
@@ -312,7 +312,7 @@ p {
 	margin-right: auto;
 }
 .pImages:hover {
-	border: 2px green solid;
+	border: 2px black solid;
 }
 .pTiitle {
 	position: relative;
