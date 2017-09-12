@@ -148,15 +148,17 @@ p {
 	z-index: 10;
 	
 }
+
+#page3:hover, #page2:hover, #aboutPage:hover, #name:hover {
+	cursor: pointer;
+}
 #name {
 	font-size: 3.2em;
 	margin-left: 10%;
 	color: white;
 	float: left;
 }
-#name:hover {
-	cursor: pointer;
-}
+
 #connect {
 	float: right;
 	font-size: 1.2em;

@@ -47,20 +47,20 @@ $(document).ready(function() {
     	}, 1500);
 	});
 
-	$("#about").on("click", function(){
+	$("#about, #aboutPage").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#aboutPage").offset().top-125
     	}, 1500);
 	});
 
 	// takes user to projects
-	$("#projects").on("click", function(){
+	$("#projects, #page2").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#page2").offset().top-130
     	}, 1000);
 	});
 	// takes users to comment section
-	$("#commentScroll").on("click", function(){
+	$("#commentScroll, #page3").on("click", function(){
 		 $('html, body').animate({
         	scrollTop: $("#page3").offset().top-125
     	}, 1500);
