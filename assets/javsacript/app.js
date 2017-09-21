@@ -116,6 +116,10 @@ $(document).ready(function() {
 	// ratio of viewing screens to document
 	const scToDoc = documentHeight / screenHeight;
 
+	const docWidth  = $(window).width();
+
+	// console.log("width: " + docWidth);
+
 	// got the possiton of the section in the document 
 	// then added a percentage of the screen size to adjust for the navbar
 	const aboutPosition = $("#aboutPage").offset().top/50 + scToDoc/2;
@@ -173,12 +177,24 @@ $(document).ready(function() {
 	    // console.log(pxlCount)
 	    // console.log(commentPosition)
     	// blur first div
-    	
-	blurPage();
+    $("#pd1, #pd2, #pd3").hide();	
+    if (docWidth> 700 ) {
+    	blurPage();
+    }
+    if (docWidth>400 && docWidth<400) {
+    	 $("#pd1, #pd2, #pd3").fadeIn();
+    }	
+    // hide photo credit on phones
+    if (docWidth < 400) {
+    	$("#photCredit").hide();
+    }
+	
 
 	// on scroll functions to blur divs	
 	$(window).on('scroll', function () {
-		blurPage();
+		if (docWidth>700) {
+			blurPage();
+		}
 	});
 	// menu Icon animate
 	var rotateAmount = 0;

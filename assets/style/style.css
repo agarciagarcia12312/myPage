@@ -184,12 +184,12 @@ p {
 .logos {
 	text-decoration: none;
 	margin-left: 5%;
-	width: 60px;
-	height:50px;
+	width: 50px;
+	height:45px;
 	border-radius: 10px;
 }
 .logos:hover {
-	width: 50px;
+	width: 0px;
 	height: 43px;
 	/*border: 1px grey solid;*/
 	}
@@ -334,7 +334,7 @@ p {
 	text-align: center;
 	color: black;
 	margin-top: 12%;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	position: relative;
 	font-weight: bold;
 	/*top: -30px;*/
@@ -356,6 +356,7 @@ p {
 	grid-row-start: 6;
 	grid-row-end: 7;
 }
+
 .p3 {
 	/*background-color:red ;*/
 	grid-column-start: 6;
@@ -451,7 +452,9 @@ button:hover {
 /*============================================================================================*/
 /*====================== movile friendly area ===============================================*/
 @media only screen and (max-width: 750px) {
-   
+   	#background{
+   		background-color: 	#F0FFFF;
+   	}
     .tlax {
 	background-image:  url("../images/tlaxcala.jpg");
 	background-repeat: no-repeat;
@@ -517,9 +520,13 @@ button:hover {
 		border-color:white;
 		font-size: 	1.8em;
 	}
+
+	#photCredit {
+		font-size: 1.0em;
+	}
 	#summary {
 		color: green;
-		font-size: 1em;
+		font-size: 1.1em;
 		margin-right: 0%;
 	/*overflow-y: scroll;	*/
 	}
@@ -530,27 +537,31 @@ button:hover {
 		grid-column-end: 5;
 
 	}
-	.centerTittle {
+	.centerTittle, #aboutPage {
 		font-size: 2.2em;
 	}
+	
 	.p1 {
+		margin-left: 20%;
 		/*background-color: blue;*/
 		grid-column-start: 2;
-		grid-column-end: 8;
+		grid-column-end: 7;
 		grid-row-start: 6;
 		grid-row-end: 7;
 	}
 	.p2 {
+		margin-left: 20%;
 		/*background-color: green;*/
 		grid-column-start: 2;
-		grid-column-end: 8;
+		grid-column-end: 7;
 		grid-row-start: 7;
 		grid-row-end: 8;
 	}
 	.p3 {
+		margin-left: 20%;
 		/*background-color:red ;*/
 		grid-column-start: 2;
-		grid-column-end: 8;
+		grid-column-end: 7;
 		grid-row-start: 8;
 		grid-row-end: 9;
 	}
@@ -584,7 +595,46 @@ button:hover {
 		font-size: 1.2em;
 		margin-top: 15px;
 		margin-right: 11%;
-		width: auto;
+		width: 160px;
+	}
+
+	.pDescription {
+		color: orange;
 	}
 }
 
+
+
+@media only screen and (orientation: portrait) and (max-width: 750px){
+	#name {
+		font-size: 1.5em;
+	}
+	.logos {
+		width: 30px;
+		height: 30px;
+	}
+	.p1 {
+		margin-left: 0px;
+		/*background-color: blue;*/
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 6;
+		grid-row-end: 7;
+	}
+	.p2 {
+		margin-left: 0px;
+		/*background-color: green;*/
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 7;
+		grid-row-end: 8;
+	}
+	.p3 {
+		margin-left: 0px;
+		/*background-color:red ;*/
+		grid-column-start: 2;
+		grid-column-end: 8;
+		grid-row-start: 8;
+		grid-row-end: 9;
+	}
+}
