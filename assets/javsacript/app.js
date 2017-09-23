@@ -39,6 +39,12 @@ database.ref("/comments").on("child_added", function(snapshot) {
 
 
 $(document).ready(function() {
+
+	// flip effect function
+	$(".card-grid").flip({
+		axis: 'x',
+  		trigger: 'hover'
+	});
 	
 	// on click functions that users to a specific section
 	$("#name").on("click", function(){
@@ -134,14 +140,14 @@ $(document).ready(function() {
 	    
 	    // the -1 added makes the scrolling blur less sensative
 	    p1Change = Math.abs(pxlCount - aboutPosition)-1  ;
-	    p2Change = Math.abs(pxlCount - pjPosition)-1 ;
+	    p2Change = Math.abs(pxlCount - pjPosition)-3 ;
 	    p3Change  = Math.abs(pxlCount - commentPosition)-1;
 	    // console.log("screenHeight: " + screenHeight);
 		// console.log("documentHeight" + documentHeight);
 		// console.log("percentage: " + scToDoc);
- 	// 	console.log("pxlCount: " + pxlCount);
- 	// 	console.log("aboutPosition: " + aboutPosition);
- 	// 	console.log("change: " +p1Change);
+ 		// 	console.log("pxlCount: " + pxlCount);
+ 		// 	console.log("aboutPosition: " + aboutPosition);
+ 		// 	console.log("change: " +p1Change);
 
 	    // console.log(commentPosition)
     	// blur first div
@@ -151,17 +157,29 @@ $(document).ready(function() {
 		$(".p1, .p2, .p3, #page2").css({"-webkit-filter": "blur("+p2Change	+"px)","-moz-filter": "blur("+p2Change	+"px)","filter": "blur("+p2Change	+"px)" }) ;
 		$("#page3, #thanks, .commentForm, .commentBox ").css({"-webkit-filter": "blur("+p3Change	+"px)","-moz-filter": "blur("+p3Change	+"px)","filter": "blur("+p3Change	+"px)" }) ;
 	
+
+		// project tittle fade in and out
+	    if (pxlCount>30 && pxlCount<37) {
+	    	$(".pTiitle").fadeIn(1000);
+	    } else {
+	    	$(".pTiitle").hide(1000);
+	    }
+
+	   	// navbar change colors 
 	    if (pxlCount>10) {
 	    	$("#name").css({
 	    		"color": "black"
 	    	},3000);
+
 	    	$(".navBar").css({
 	    		"background-image": "url(assets/images/wall1.jpg)"
 	    	});
+
 	    	$(".sideButtons").css({
 	    		"color": "black"
 	    	});
 	    }
+	    // navBar change colors cont....
 	    if (pxlCount<10) {
 	    	$("#name").css({
 	    		"color": "white"
@@ -178,6 +196,7 @@ $(document).ready(function() {
 	    // console.log(commentPosition)
     	// blur first div
     $("#pd1, #pd2, #pd3").hide();	
+    // blur page only effictive on screenseize over 700pxl
     if (docWidth> 700 ) {
     	blurPage();
     }
@@ -200,7 +219,7 @@ $(document).ready(function() {
 	var rotateAmount = 0;
 	var clickCount =1;
 	$("#menuIcon").on("click", function() {
-		console.log("click working")
+		// console.log("click working")
 		
 		rotateAmount+=720;
 
@@ -212,6 +231,7 @@ $(document).ready(function() {
      
           }
 		})
+		// llogin for side navbar fade in and out
 		if (clickCount%2) {
 			$("#sidebar").slideDown("fast","linear");
 		} else {

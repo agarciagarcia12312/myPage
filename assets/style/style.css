@@ -82,7 +82,7 @@ p {
 	font-weight: bold;
 	font-family: "righteous";
 	/*text-align: ;*/
-	font-size: 1.5em;
+	font-size: 1em;
 	width: auto;
 	height: auto;
 	margin-top: 20px;
@@ -95,7 +95,7 @@ p {
 	cursor: pointer;
 	color: 	green;
 	border-color:white;
-	font-size: 	1.8em;
+	font-size: 	1.2em;
 }
 #resumeLink {
 	text-decoration: underline;;
@@ -170,7 +170,7 @@ p {
 
 #menuIcon {
 	position: fixed;	
-	left: 1.3%;
+	left: .8%;
 	top: 15%;
 	width: 	90px;
 	height:90px;
@@ -211,7 +211,7 @@ p {
 	margin-right: auto;
 	margin-left: auto;
 	font-weight: bold;
-	font-size: 4.0em;
+	font-size: 3.0em;
 }
 
 #joke:hover {
@@ -225,7 +225,7 @@ p {
 	grid-row-end: 3;
 	margin-top: 7%;
 	font-weight: bold;
-	font-size: 4.0em;
+	font-size: 3.0em;
 }
 
 .me {
@@ -261,9 +261,9 @@ p {
 }
 #summary {
 	color: green;
-	font-size: 2em;
+	font-size: 1.2em;
 	margin-right: 10%;
-	overflow-y: scroll;	
+	/*overflow-y: scroll;	*/
 }
 #heightDiv {
 	grid-column-start: 1;
@@ -285,7 +285,7 @@ p {
 .centerTittle {
 	color: green;
 	text-align:center;
-	font-size: 3.2em;
+	font-size: 2.8em;
 	/*text-decoration: underline;*/
 	/*text-decoration-style: */
 }
@@ -296,10 +296,16 @@ p {
 	margin-right: auto;
 	
 }
+#card1, #card2, #card3 {
+	/*background-color: grey;*/
+	width: 90%;
+	height: 100%;
+	border-radius: 10px;
+}
 .pImages {
 	width: 100%;
 	height: 100%;
-	margin-top: 20px;
+	/*margin-top: 20px;*/
 	border-radius: 10px;
 	border: 2px green solid;
 	margin-right: auto;	
@@ -308,20 +314,20 @@ p {
 .projects {
 	/*background-color: orange;*/
 	width: 75%;
-	height: 200px;
+	
 	margin-left: auto;
 	margin-right: auto;
 }
 .pImages:hover {
-	border: 2px black solid;
+	border: 2px blue solid;
 }
 .pTiitle {
 	position: relative;
 	width: 100%;
-	height: 25%;
+	height: 20%;
 	top: -90px;
 	color: black;
-	font-size: 2.2em;
+	font-size: 2em;
 	font-weight: bold;
 	background-color: white;
 	margin-left: 1px;
@@ -329,25 +335,53 @@ p {
 	z-index: 0;
 	opacity: .9;
 	border-top: 2px blue solid;
+	border-radius: 10px;
+}
+.back {
+	background-color:#e6e6e6 ;
+	border-radius: 10px;
+	border:1px blue solid;
 }
 .pDescription {
+	margin-top:10px;
 	text-align: center;
-	color: black;
-	margin-top: 12%;
+	color: green;
+	/*margin-top: 12%;*/
 	font-size: 1.2em;
 	position: relative;
+	font-family: 'Alegreya', serif;
 	font-weight: bold;
 	/*top: -30px;*/
 }
+
+.btnLink {
+	display: block;
+	width:40%;
+	height: 40px;
+	margin:20px auto 0px auto;
+	font-size: 1.2em;
+}
+.btnLink:hover {
+	color: green;
+}
+.link {
+	text-align: center;
+	font-size: 1.1em;
+	color: blue;
+	
+}
+.link:hover {
+	font-size: 1.2em;
+	color:green;
+}
+
 .p1 {
 	/*background-color: blue;*/
 	grid-column-start: 2;
 	grid-column-end: 4;
 	grid-row-start: 6;
 	grid-row-end: 7;
-}
-#p1 {
-	/*background: url('assets/images/me.JPG') no-repeat center center fixed; */
+	height: 250px;
 }
 .p2 {
 	/*background-color: green;*/
@@ -355,6 +389,7 @@ p {
 	grid-column-end: 6;
 	grid-row-start: 6;
 	grid-row-end: 7;
+	height: 250px;
 }
 
 .p3 {
@@ -363,6 +398,7 @@ p {
 	grid-column-end: 8;
 	grid-row-start: 6;
 	grid-row-end: 7;
+	height: 250px;
 }
 
 .p4 {
@@ -430,8 +466,7 @@ button {
 /*button*/
 button:hover {
 	cursor: pointer;
-	/*border-color: grey;*/
-	border: 2px yellow solid;
+	border: 2px blue solid;
 } 
 #open {
 	margin-left: 30%;
@@ -496,16 +531,16 @@ button:hover {
 		/*background-color: grey;*/
 		position: fixed;
 		left: 0px;
-		top: 22%;
+		top: 25%;
 		/*border: 2px solid black;*/
 	}
 	.sideButtons {
 		background-color: none;
-		color: white;
+		color: green;
 		font-weight: bold;
 		font-family: "righteous";
 		/*text-align: ;*/
-		font-size: .8em;
+		font-size: .7em;
 		width: auto;
 		height: auto;
 		margin-top: 2%;
@@ -518,7 +553,7 @@ button:hover {
 		cursor: pointer;
 		color: 	green;
 		border-color:white;
-		font-size: 	1.8em;
+		font-size: 	1em;
 	}
 
 	#photCredit {
@@ -526,9 +561,9 @@ button:hover {
 	}
 	#summary {
 		color: green;
-		font-size: 1.1em;
+		font-size: 1.4em;
 		margin-right: 0%;
-	/*overflow-y: scroll;	*/
+		overflow-y: scroll;	
 	}
 
 	.me {
@@ -541,6 +576,7 @@ button:hover {
 		font-size: 2.2em;
 	}
 	
+
 	.p1 {
 		margin-left: 20%;
 		/*background-color: blue;*/
@@ -551,6 +587,7 @@ button:hover {
 	}
 	.p2 {
 		margin-left: 20%;
+		margin-top: 50px;
 		/*background-color: green;*/
 		grid-column-start: 2;
 		grid-column-end: 7;
@@ -559,6 +596,7 @@ button:hover {
 	}
 	.p3 {
 		margin-left: 20%;
+		margin-top: 50px;
 		/*background-color:red ;*/
 		grid-column-start: 2;
 		grid-column-end: 7;
@@ -599,7 +637,10 @@ button:hover {
 	}
 
 	.pDescription {
-		color: orange;
+		color: green;
+		font-size: 1em;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
 }
 
@@ -636,5 +677,8 @@ button:hover {
 		grid-column-end: 8;
 		grid-row-start: 8;
 		grid-row-end: 9;
+	}
+	.btnLink{
+		width:50%;
 	}
 }

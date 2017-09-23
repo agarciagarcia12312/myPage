@@ -8,7 +8,9 @@
 	<!-- ?jQuere -->
 	<!-- <script src="src/jquery.rotate.js"></script> -->
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- google font link -->
+	<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<!-- jquery transform -->
 	<link rel="icon" href="assets/images/me3.JPG">
 	
@@ -119,33 +121,57 @@
 
 		<!-- individual projects start -->
 		<div class="p1">
-			<a href="https://shielded-fortress-56214.herokuapp.com/">
-				<div class="projects" >
-					<img class="pImages" src="assets/images/letsDecide.png" id="pic1">
-					<h3 class="pTiitle" id="t1" style="display: none;">Lets Decide!</h3>
-				</div>
-			</a>	
-			<p class="pDescription">Website that helps users find a place to eat while helping businesses increase traffic during slow hours </p>
+			<div id="card1" class="card-grid">	
+					<div class="front projects" >
+						<img class="pImages" src="assets/images/letsDecide.png" id="pic1">
+						<h3 class="pTiitle" id="t1" style="display: none;">Lets Decide!</h3>
+					</div>
+				<div class="back">	
+					<p class="pDescription">Website that helps users find a place to eat while helping businesses increase traffic during slow hours </p>
+					<button  onclick=" window.open('https://github.com/agarciagarcia12312/letsDecide','_blank')" class="btnLink">
+						Link to Code
+					</button>
+					<a href="https://shielded-fortress-56214.herokuapp.com/" target="_blank">
+						<h3 class="link">Link to Project</h3>
+					</a>	
+				</div>	
+			</div>
 		</div>
 
 		<div class="p2">
-		<a href="https://maya-tea.github.io/moveToDenver/">
-			<div class="projects" >
-				<img class="pImages" src="assets/images/moveToDenver.png" id ="pic2">
-				<h3 class="pTiitle" style= "display: none;" id="t2">Move To Denver</h3>
-			</div>
-		</a>
-		<p class="pDescription" >Website that provides information on all the denver neighborhoods</p>	
+			<div id="card2" class="card-grid">
+				<div class="front projects" >
+					<img class="pImages" src="assets/images/moveToDenver.png" id ="pic2">
+					<h3 class="pTiitle" style= "display: none;" id="t2">Move To Denver</h3>
+				</div>
+				<div class="back">
+					<p class="pDescription" >Website that provides information on all the denver neighborhoods</p>
+					<button  onclick=" window.open('https://github.com/Maya-Tea/moveToDenver','_blank')" class="btnLink">
+						Link to Code
+					</button>
+					<a href="https://maya-tea.github.io/moveToDenver/" target="_blank">
+						<h3 class="link">Link to Project</h3>
+					</a>
+				</div>	
+			</div>			
 		</div>
 
 		<div class="p3">
-		<a href="https://agarciagarcia12312.github.io/TriviaGame/">
-			<div class="projects">
-				<img class="pImages" src="assets/images/trivia.png" id="pic3">
-				<h3 class="pTiitle" id="t3" style="display: none;">Trivia Game</h3>
-			</div>
-		</a>
-		<p class="pDescription" >Game of Trivia</p>	
+			<div id="card3" class="card-grid">
+				<div class=" front projects">
+					<img class="pImages" src="assets/images/trivia.png" id="pic3">
+					<h3 class="pTiitle" id="t3" style="display: none;">Trivia Game</h3>
+				</div>
+				<div class="back">
+					<p class="pDescription" >Game of Trivia made with Bootstrap, jQuery, and javascript </p>
+					<button  onclick=" window.open('https://github.com/agarciagarcia12312/TriviaGame','_blank')" class="btnLink">
+						Link to Code
+					</button>
+					<a href="https://agarciagarcia12312.github.io/TriviaGame/" target="_blank">
+						<h3 class="link">Link to Project</h3>
+					</a>	
+				</div>
+			</div>		
 		</div>
 		
 		<div class="p4">	</div>
@@ -187,10 +213,14 @@
 	
 		<div class="commentSpace"></div>
 	</div>
+
 </body>
 
 <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
 
 <!-- javascript reference -->
 	<script type="text/javascript" src="assets/javsacript/app.js" ></script>
+		  <!-- scripts for jquery flip effect -->
+   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+   <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 </html>
